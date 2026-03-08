@@ -14,8 +14,12 @@ def main():
     print("Littering Detection System")
     print("Press ESC to exit\n")
 
-    video_path = "photos2/good2.mp4"
-    cap = cv2.VideoCapture(video_path)
+    #use video file instead of webcam
+    # video_path = "objectdetection/objectdetection1/photos2/bad2.mp4"
+    # cap = cv2.VideoCapture(video_path)
+
+    # Use webcam instead of video file
+    cap = cv2.VideoCapture(0)
 
     save_folder = "littered_frames1"
     save_folder1 = "people_in_frame"# >>> ADDED
