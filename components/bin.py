@@ -6,7 +6,7 @@ class ROIResults:
         self.box = box
 
 
-def detectroi(frame):
+def draw_bin(frame):
 
     h, w, _ = frame.shape
 

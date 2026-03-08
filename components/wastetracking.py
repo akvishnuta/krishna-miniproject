@@ -98,6 +98,9 @@ class WasteTracker:
         obj["bbox"] = bbox
         obj["prev_center"] = center
 
+        print("Littered now:", littered_now)
+        print("littered : ", obj["littered"])
+
         return littered_now
 
     def draw(self, frame):

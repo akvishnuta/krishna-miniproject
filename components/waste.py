@@ -10,9 +10,12 @@ img_size = 960
 track_id = 0
 
 
-def detectwaste(frame):
+def detectwaste(frame, increment_id=False):
 
     global track_id
+    
+    if(increment_id):
+        track_id += 1
 
     results = model(frame, conf=conf_threshold, imgsz=img_size)[0]
 
@@ -36,7 +39,6 @@ def detectwaste(frame):
             })
             print("Detected:", class_name, "Confidence:", conf)
             print('TRACK ID:', track_id)
-            track_id = 0  # Only one object tracked
     print("waste_boxes:", waste_boxes)
     del results
     gc.collect()
